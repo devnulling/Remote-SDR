@@ -1,29 +1,13 @@
-#!/usr/bin/python3           # This is client.py file
-
-
-
+#!/usr/bin/python3
 import asyncio
 import websockets
 import json
 import xmlrpc.client
 
-# create a socket object
-
-
-
-# get local machine name
-host = 'localhost'                           
-
+host = 'localhost'
 port_para_Web = 8003
 adr_local = "http://localhost:9003"
-
 Sxml = xmlrpc.client.ServerProxy(adr_local)
-
-
-
-
-
-                             
 print("Passerelle Parametres du client WEB")
 
 async def consumer_handler(websocket_p, path):
@@ -63,21 +47,8 @@ async def consumer_handler(websocket_p, path):
               Sxml.set_Largeur_filtre(float(F["Larg_Fil"]))
 			  
         await websocket_p.send("OK")
-              
-            
-  
-        
-        
-
-
-        
-    
-        
-
-        
 
 start_server_para = websockets.serve(consumer_handler, "", port_para_Web)
-
 loop = asyncio.get_event_loop()
 
 try:

@@ -1233,7 +1233,7 @@ function visus_click_slider(t,anim){
 			} else {
 				$("#"+t).css("top",h-20);$("#"+t).css("left",w-20);
 			}
-			$("#"+t+"_fleche").css("background-image"," url('/css/Image/fleche_NW.png')");
+			$("#"+t+"_fleche").css("background-image"," url('/static/img/fleche_NW.png')");
 					
 	} else { //Bloc sort
 	        fenetres.para_visus_visible=true;
@@ -1241,7 +1241,7 @@ function visus_click_slider(t,anim){
 				left: w/2, top:h/3  
 			});			
 			
-			$("#"+t+"_fleche").css("background-image"," url('/css/Image/fleche_SE.png')");
+			$("#"+t+"_fleche").css("background-image"," url('/static/img/fleche_SE.png')");
 			
 	}
 }
